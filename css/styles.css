@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+	/* ### Colors ### */
+
+	/* ## Primary */
+
+	--dark-sea-green: hsl(179, 62%, 43%);
+	--chartreuse: hsl(71, 73%, 54%);
+
+	/* ## Neutral */
+
+	--light-grayish-blue: hsl(204, 43%, 93%);
+	--grayish-blue: hsl(218, 22%, 67%);
+	--white: hsl(0, 0%, 100%);
+
+	/* ### Typography ### */
+
+	/* ## Body Copy */
+
+	--font-size: 1rem;
+
+	/* ## font family */
+
+	--ff-primary: 'Karla', sans-serif;
+}
+
+/* general style and structure  */
+
+html {
+	box-sizing: border-box;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: var(--ff-primary);
+	background-color: var(--light-grayish-blue);
+	line-height: 1.56em;
+	min-height: calc(100vh - 100px);
+	/* height: 100vh; */
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+ul,
+li {
+	/* display: inline-block; */
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* main section  */
+
+.container {
+	max-width: 39.69rem;
+	margin: 4.5rem auto 3.88rem;
+	width: 90%;
+}
+
+.card {
+	border-radius: 0.31rem;
+	box-shadow: 0 15px 30px 0 hsla(212, 100%, 33%, 0.15);
+	overflow: hidden;
+}
+
+/* grid items section  */
+/* .grid-item-1 styling  */
+
+h1 {
+	color: var(--dark-sea-green);
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.44rem;
+}
+
+h3 {
+	color: var(--chartreuse);
+	font-size: 0.94rem;
+	font-weight: 700;
+	line-height: 1.25rem;
+}
+
+.grid-item-1 p {
+	color: var(--grayish-blue);
+	font-weight: 400;
+	font-size: 0.88rem;
+	line-height: 1.63rem;
+}
+
+.grid-item-1 h3 {
+	margin: 1.5em 0 1em;
+}
+
+.grid-item-1 {
+	background-color: var(--white);
+	padding: 1.5rem;
+}
+
+/* grid item 2 styling  */
+
+.grid-item-2 {
+	background-color: var(--dark-sea-green);
+	color: var(--white);
+	padding: 1.5rem;
+}
+
+.grid-item-2 h2,
+.grid-item-3 h2 {
+	font-size: 1.13rem;
+	font-weight: 700;
+	line-height: 1.31rem;
+}
+.dollar {
+	color: var(--white);
+	font-size: 2rem;
+	line-height: 2.31rem;
+
+	margin: 1.13em 0 0.25em;
+}
+
+.dollar span {
+	display: inline;
+	vertical-align: middle;
+	font-size: 1rem;
+	line-height: 1.63rem;
+	opacity: 50%;
+	margin-left: .31em;
+}
+
+.full-access {
+	font-size: 1rem;
+	line-height: 1.63rem;
+
+	margin-bottom: 1.63em;
+}
+
+.btn {
+	border: none;
+	border-radius: 0.31rem;
+	background-color: var(--chartreuse);
+	color: inherit;
+	width: 100%;
+	font-size: 1rem;
+	line-height: 3em;
+	box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+/* grid item 3 styling  */
+
+.grid-item-3 {
+	background-color: rgba(42, 178, 175, 85%);
+	color: var(--white);
+	padding: 1.5rem;
+}
+
+.grid-item-3 h2 {
+	margin-bottom: 1.13rem;
+}
+
+.grid-item-3 ul {
+	font-size: 0.88rem;
+	opacity: 75%;
+}
+
+/* footer  */
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+/* desktop design  */
+
+@media screen and (min-width: 40em) {
+	/* general structure and style  */
+
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+	}
+
+	.d-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 13.5em 16.2em;
+	}
+
+	.grid-item-1 {
+		grid-column: 1 / -1;
+	}
+
+	/* card section  */
+
+	.card {
+		border-radius: .5rem;
+	}
+
+	.card > * {
+		width: 100%;
+	}
+
+	.grid-item {
+		padding: 2.5em;
+	}
+
+	/* grid item 1 styling for desktop  */
+
+	.grid-item-1 h1 {
+		font-size: 1.5rem;
+		line-height: 1.57em;
+	}
+
+	.grid-item-1 h3 {
+		font-size: 1rem;
+		line-height: 1.63em;
+		margin: 0.5em 0 0.69em;
+	}
+
+	/* grid item 2 section  */
+	.dollar {
+		margin: 0.5em 0 .06em;
+	}
+
+	.full-access {
+		margin-bottom: 1.5em;
+	}
+
+	.grid-item-3 ul {
+		line-height: 1.25rem;
+	}
+
+	.grid-item-3 h2 {
+		margin-bottom: 0.8em;
+	}
+}
